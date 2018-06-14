@@ -10,10 +10,11 @@ error_reporting( E_ALL );
 require_once('../vendor/autoload.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+use easyiplookup\AppConfigFactory;
 
 
 // create & run application
-$app = new \qck\core\App( new \easyiplookup\AppConfigFactory( null ) );
+$app = new \qck\core\App( new AppConfigFactory( null ) );
 
 $Config = $app->getAppConfig();
 

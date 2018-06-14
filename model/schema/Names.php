@@ -13,8 +13,8 @@ class Names
   public function run()
   {   
     /* @var \Illuminate\Database\Schema\Blueprint $table */
-    if (!Capsule::schema()->hasTable( 'Comments' ))
-      Capsule::schema()->create('Comments', function ($table) {
+    if (!Capsule::schema()->hasTable( 'Names' ))
+      Capsule::schema()->create('Names', function ($table) {
         $table->increments('id');
         
         $table->string('ip')->unique();
