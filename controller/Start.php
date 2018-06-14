@@ -58,8 +58,12 @@ class Start extends \qck\core\abstracts\Controller
     else
     {
       
-      if($N != null)
-        $Response->addHeader('Location: http://'.$N->ip.':'.$N->port.'/');
+      if(isset($N) && $N != null)
+      {
+        $url = 'http://'.$N->ip.':'.$N->port.'/';
+        header("Location: $url");
+        die();
+      }
         
       else {
         $Response->setContents('No Data found.');
