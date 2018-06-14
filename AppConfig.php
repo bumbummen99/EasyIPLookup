@@ -58,6 +58,11 @@ class AppConfig extends \qck\ext\abstracts\AppConfig
   {
     return "EasyIPLookup";
   }
+  
+  public function getPassword()
+  {
+    return "Password";
+  }
 
   private $Argv;
 
