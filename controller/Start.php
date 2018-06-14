@@ -19,6 +19,7 @@ class Start extends \qck\core\abstracts\Controller
     $Port = isset($_GET['port']) ? $_GET['port'] : null;
     $Name = isset($_GET['name']) ? $_GET['name'] : null;
     $UserPassword = isset($_GET['password']) ? $_GET['password'] : null;
+    $JSON = isset($_GET['json']);
     
     if($Name != null)
     {
@@ -48,8 +49,22 @@ class Start extends \qck\core\abstracts\Controller
     }
     
     $Response = new \qck\core\Response();
-    $Response->setContentType( 'Content-Type: application/json; charset=utf-8' );
-    $Response->setContents(json_encode($Content));
+    
+    if($JSON)
+    {
+      $Response->setContentType( 'Content-Type: application/json; charset=utf-8' );
+      $Response->setContents(json_encode($Content));
+    }
+    else
+    {
+      
+      if($N != null)
+        $Response->addHeader('Location: http://'.$N->ip.':'.$N->port.'/');
+        
+      else {
+        $Response->setContents('No Data found.');
+      }
+    }
     return $Response;
   }
 }
