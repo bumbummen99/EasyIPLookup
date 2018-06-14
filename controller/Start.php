@@ -39,7 +39,8 @@ class Start extends \qck\core\abstracts\Controller
       else {
         if($N != null)
           $Content = ['status' => 1, 'ip' => $N->ip, 'port' => $N->port];
-        $Content = ['status' => 0, 'error' => 'Name does not exist'];
+        else
+          $Content = ['status' => 0, 'error' => 'Name does not exist'];
       }
     }
     else {
