@@ -1,0 +1,21 @@
+{
+    "name": "easyiplookup",
+    "description": "An pr0gramm clone based on quick",
+    "authors": [
+        {
+            "name": "Patrick",
+            "email": "donnironon@hotmail.info"
+        }
+    ],
+    "require": {
+      "michaelmueller/quick": "dev-master",
+      "illuminate/database": "^5.4"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "easyiplookup\\": ""
+        }
+    }
+}
