@@ -1,3 +1,6 @@
+# Discontinued
+I have discontinued this project as i have no use in it anymore and there are easier ways to accomplish the desired behaviour.
+
 # EasyIPLookup
 An easy solution for quick name lookups. This can be used to update a list of names/keys with 
 a combination of an ip address and a port. This allows to simply access your home network while 
